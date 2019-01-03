@@ -43,7 +43,7 @@ def trigger(command_string):
     # Iterate over all appliances (ie. keys in words)
     for appliance in words:
         # If the command contains any words referring to the appliance
-        if obj_words.intersection(words[appliance]):
+        if command_words.intersection(words[appliance]):
             # Trigger the appliance to status
             port_num = GPIO_ports[appliance]
             switch(port_num,status)
